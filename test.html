@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function foo  (a) {
+            console.log('foo的a:',a)
+            var m  = 'foom'
+            console.log('foo的m:',m)
+            function foo1 (a) {
+                // var m = 'foo1m'
+                console.log('foo1的a:',a)
+                console.log('foo1的m:',m)
+            }
+            foo1(4);
+        }
+
+        foo(3);
+
+        for(let i  =0; i<7;i++) {
+            let b = '122';
+        }
+
+        // console.log(i,b)
+
+        if(1) {
+            let b = 9;
+            console.log(b,d);
+            let a = 8;
+            const c = 9;
+            var d = 10;
+        }
+
+        function identify() {
+            return this.name.toUpperCase();
+        }
+
+        function speak() {
+            var greeting = 'hello, i am '+identify.call(this);
+            console.log(greeting)
+            debugger
+        }
+        var me = {name: 'Kyle'}
+        var you = {name: 'Reader'}
+
+        identify.call(me);
+        identify.call(you);
+        speak.call(you)
+
+    </script>
+    
+</body>
+</html>
